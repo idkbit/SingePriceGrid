@@ -2,3 +2,63 @@
   font-size: 16px;
   font-family: "Karla", sans-serif;
 }
+
+.wrapper {
+  @include flex(row, center, center);
+  min-height: 100vh;
+  background-color: $lightGray;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
+}
+
+.part {
+  padding: 50px;
+}
+
+.white {
+  grid-column: 1/3;
+  @include flex(column, space-between, flex-start);
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.cyan {
+  grid-column: 1/2;
+  @include flex(column, space-between, flex-start);
+  background-color: $cyan;
+  border-bottom-left-radius: 5px;
+
+  .btn {
+    width: 100%;
+    border-radius: 5px;
+    background-color: $brightYellow;
+    border: 3px solid transparent;
+    padding: 10px 20px;
+    color: $lightGray;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-size: 1.1rem;
+    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.219);
+    &:hover {
+      background-color: $cyan;
+      color: $lightGray;
+      border-color: $lightGray;
+      cursor: pointer;
+    }
+  }
+}
+
+.light-cyan {
+  @include flex(column, space-between, flex-start);
+  background-color: $lightCyan;
+  border-bottom-right-radius: 5px;
+  padding-right: 100px;
+  line-height: 1.5;
+}
