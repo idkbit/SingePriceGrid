@@ -203,8 +203,12 @@
   .content .part {
     padding: 30px;
   }
+  .content .heading1 {
+    margin-bottom: 10px;
+  }
   .content .heading2 {
     font-size: 1rem;
+    margin-bottom: 10px;
   }
   .content .cyan {
     border-bottom-left-radius: 0;
